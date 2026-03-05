@@ -1,0 +1,54 @@
+# Laboratório de Estudos de Tecnologia Istio 🚀
+
+Este repositório contém um ambiente de laboratório para explorar e testar o
+Istio como substituto ao Nginx em um cluster Kubernetes. O objetivo é analisar
+os principais usos dessa tecnologia em cenários reais, como implantação de
+APIs em Kubernetes com Istio operando em containers e dentro do cluster.
+
+---
+
+## 📌 Casos de Uso
+
+- Substituição do **Nginx** pelo Istio como *service mesh*.
+- Teste de uma API simples em um ambiente Kubernetes com Istio.
+- Avaliar configurações de tráfego, segurança e observabilidade através do Istio.
+
+---
+
+## 🏗️ Arquitetura do Repositório
+
+```
+lab-istio/
+├── README.md            # Documentação (este arquivo)
+├── iac/                 # Infraestrutura como Código (Terraform)
+│   ├── arquivos-terraform/
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   ├── provider.tf
+│   │   ├── terraform.tfvars
+│   │   ├── variables.tf
+│   │   └── README.md
+│   └── modules/          # Módulos reutilizáveis
+│       ├── gke/
+│       ├── pubsub/
+│       └── sql/
+├── pipeline/            # Configurações de CI/CD para deploy do IAC
+└── k8s/                 # Manifests e arquivos declarativos do Kubernetes
+    ├── istio/           # Configuração e exemplos do Istio
+    └── exemplos-api/    # API simples utilizada nos testes
+```
+
+### 🔧 Detalhes dos Subdiretórios
+
+- **iac/**: Contém o código Terraform usado para provisionar o
+  ambiente de teste (ex.: resource group, AKS, GKE, etc.).
+- **pipeline/**: Scripts e configurações para automatizar o deploy da
+  infraestrutura com CI/CD.
+- **k8s/**: Arquivos declarativos do Istio e exemplos de uma API simples
+  (se necessário) para validar a malha de serviço.
+
+---
+
+> **Observação:** Este laboratório é voltado para fins educacionais e de
+> experimentação. Ajustes e extensões são bem-vindos! 😊
+bY Vitor Santos.
