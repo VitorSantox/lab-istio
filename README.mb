@@ -19,23 +19,22 @@ APIs em Kubernetes com Istio operando em containers e dentro do cluster.
 
 ```
 lab-istio/
-├── README.md            # Documentação (este arquivo)
-├── iac/                 # Infraestrutura como Código (Terraform)
-│   ├── arquivos-terraform/
-│   │   ├── main.tf
-│   │   ├── outputs.tf
-│   │   ├── provider.tf
-│   │   ├── terraform.tfvars
-│   │   ├── variables.tf
-│   │   └── README.md
-│   └── modules/          # Módulos reutilizáveis
-│       ├── gke/
-│       ├── pubsub/
-│       └── sql/
-├── pipeline/            # Configurações de CI/CD para deploy do IAC
-└── k8s/                 # Manifests e arquivos declarativos do Kubernetes
-    ├── istio/           # Configuração e exemplos do Istio
-    └── exemplos-api/    # API simples utilizada nos testes
+├── iac/
+│   ├── modules/                # O "molde" (Terraform puro)
+│   │   ├── azure-vnet/
+│   │   ├── azure-aks/
+│   │   └── istio-helm/
+│   └── live/                   # A "instância" (Terragrunt)
+│       ├── terragrunt.hcl      # Configuração global (Remote State/Provider)
+│       ├── dev/
+│       │   ├── vnet/
+│       │   │   └── terragrunt.hcl
+│       │   ├── aks/
+│       │   │   └── terragrunt.hcl
+│       │   └── istio/
+│       │       └── terragrunt.hcl
+├── .github/workflows/          # Pipelines
+└── k8s/                        # Manifestos (Gateway, VirtualService)
 ```
 
 ### 🔧 Detalhes dos Subdiretórios
