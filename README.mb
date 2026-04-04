@@ -40,14 +40,15 @@ lab-istio/
 ### 🔧 Detalhes dos Subdiretórios
 
 - **iac/**: Contém o código Terraform usado para provisionar o
-  ambiente de teste (ex.: resource group, AKS, GKE, etc.).
+  ambiente de teste (ex.: Azure/GCP com resource group, AKS, GKE, etc.).
 - **pipeline/**: Scripts e configurações para automatizar o deploy da
-  infraestrutura com CI/CD.
+  infraestrutura com CI/CD e versionamento da api.
 - **k8s/**: Arquivos declarativos do Istio e exemplos de uma API simples
   (se necessário) para validar a malha de serviço.
 
 ---
 
-> **Observação:** Este laboratório é voltado para fins educacionais e de
-> experimentação. Ajustes e extensões são bem-vindos! 😊
+> **Observação:** Este laboratório é voltado para fins educacionais e de experimentação. 
+
+Ajustes e extensões são bem-vindos! 😊
 bY Vitor Santos.

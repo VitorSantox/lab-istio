@@ -1,0 +1,5 @@
+cd ~/projetos/lab-istio
+cat <<EOF > common_vars.yaml
+resource_group_name: "rg-istio-lab-dev"
+location: "eastus"
+EOF
