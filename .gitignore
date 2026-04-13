@@ -1,0 +1,17 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+override.tf
+override.tf.json
+*.tfvars
+.terraform.lock.hcl
+
+# Terragrunt
+.terragrunt-cache/
+
+# Editor / OS
+*.swp
+*.bak
+.DS_Store

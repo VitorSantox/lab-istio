@@ -47,6 +47,20 @@ lab-istio/
   (se necessário) para validar a malha de serviço.
 
 ---
+###testes manuais IaC azure.\
+via azure cli, instalr terragrunt, clonar o projeto, rodar terragrunt ply
+sudo apt-get update
+sudo apt-get install -y curl unzip
+TG_VERSION=0.56.26
+curl -L -o /tmp/terragrunt_linux_amd64 https://github.com/gruntwork-io/terragrunt/releases/download/v${TG_VERSION}/terragrunt_linux_amd64
+sudo mv /tmp/terragrunt_linux_amd64 /usr/local/bin/terragrunt
+sudo chmod +x /usr/local/bin/terragrunt
+terragrunt --version
+
+
+
+
+
 
 > **Observação:** Este laboratório é voltado para fins educacionais e de experimentação. 
 

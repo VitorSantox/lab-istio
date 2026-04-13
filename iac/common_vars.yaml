@@ -1,0 +1,2 @@
+resource_group_name: "rg-istio-lab-dev"
+location: "eastus"
